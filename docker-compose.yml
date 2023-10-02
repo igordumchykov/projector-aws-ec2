@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server-1:
+    image: nginx
+    volumes:
+      - ./config/server-1.conf:/etc/nginx/nginx.conf
+    ports:
+      - '81:81'
+  server-2:
+    image: nginx
+    volumes:
+      - ./config/server-2.conf:/etc/nginx/nginx.conf
+    ports:
+      - '82:82'

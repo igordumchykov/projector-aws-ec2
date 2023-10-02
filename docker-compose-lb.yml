@@ -1,0 +1,8 @@
+version: '3'
+services:
+  load-balancer:
+    image: nginx
+    volumes:
+      - ./config/server-lb.conf:/etc/nginx/nginx.conf
+    ports:
+      - '80:80'
